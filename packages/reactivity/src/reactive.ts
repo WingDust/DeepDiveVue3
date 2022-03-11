@@ -178,6 +178,10 @@ export function shallowReadonly<T extends object>(target: T): Readonly<T> {
   )
 }
 
+
+/*\ ## 为什么 Vue 使用 WeakMap 做为储存响应式对象管理的原因
+|*| - 因为
+\*/ 
 function createReactiveObject(
   target: Target,
   isReadonly: boolean,

@@ -272,4 +272,10 @@ describe('reactivity/reactive', () => {
     const observed = reactive(original)
     expect(isReactive(observed)).toBe(false)
   })
+
+  test('normal',()=>{
+    const a = reactive({aa:2});
+    console.log(typeof(a));
+    // debugger
+  })
 })
