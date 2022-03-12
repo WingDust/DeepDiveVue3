@@ -46,6 +46,13 @@ interface Fragments{
  * @returns boolean
  */
 export const isEmptyContent = (path:string):boolean=>{
+  if (existsSync(path)) {
+    
+  } 
+  // 不存在
+  else {
+    return true;
+  }
   if (existsSync(path)&&readFileSync(path).length===0){return true;};
   return false;
 };
