@@ -135,9 +135,9 @@ export const lsfiles = () => {
         prettierobj(i)
         if(i===''||i==='\r') {break;};
         let ctx = JSON.parse(i);
-        // 当
+        // 当属性 type 表示 re 遍历完成，应该执行最后写入步骤
         if (ctx?.type ==='summary') {
-          // console.log(content);
+          prettierobj(content);
           contentnormalize(content);
           break;
         }

@@ -155,6 +155,7 @@ var lsfiles = function () {
                 ;
                 var ctx = JSON.parse(i);
                 if ((ctx === null || ctx === void 0 ? void 0 : ctx.type) === 'summary') {
+                    prettierobj(content);
                     contentnormalize(content);
                     break;
                 }
