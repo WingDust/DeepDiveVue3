@@ -273,7 +273,10 @@ describe('reactivity/reactive', () => {
     expect(isReactive(observed)).toBe(false)
   })
 
-  test('normal',()=>{
+  test('typeof',()=>{
+    /*\ ## 测试 reactive 响应式对象类型
+    |*| - 响应式对象类型对象
+    \*/ 
     const a = reactive({aa:2});
     console.log(typeof(a));
     // debugger
