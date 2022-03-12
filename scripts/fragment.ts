@@ -32,7 +32,7 @@ const prettier = (obj:string|Object)=>{
       break;
     }
     default:
-      console.log(`no{obj}`);
+      console.log(`not string or object :{obj}`);
       
       break;
   }
