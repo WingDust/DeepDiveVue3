@@ -21,7 +21,7 @@ interface Fragments{
   frags:Fragment[]
 }
 
-const prettier = (obj:string|Object)=>{
+const prettierobj = (obj:string|Object)=>{
   switch (typeof(obj)) {
     case 'string':{
       console.log(JSON.stringify(JSON.parse(obj),null,2));
