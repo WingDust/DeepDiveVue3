@@ -32,7 +32,7 @@ const prettier = (obj:string|Object)=>{
       break;
     }
     default:
-      console.log(`{}`);
+      console.log(`ca{obj}`);
       
       break;
   }
