@@ -24,7 +24,7 @@ interface Fragments{
 const prettier = (obj:string|Object)=>{
   switch (typeof(obj)) {
     case 'string':{
-      console.log(JSON.parse(obj));
+      console.log(JSON.stringify(JSON.parse(obj),nu));
       
     }
       
