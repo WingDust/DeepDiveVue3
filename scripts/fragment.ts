@@ -67,7 +67,7 @@ const write = (str:string)=>{
 
 const contentnormalize = (content:Fragments[])=>{
   for (const [i,fragment] of content.entries()) {
-      console.log({i});
+      // console.log({i});
     // 文件写入检查，不为空删除文件
     if (i === 0 && !isEmptyContent(fragmentfile)) {
       console.log('remove fragment-file because it not empty');
@@ -77,9 +77,9 @@ const contentnormalize = (content:Fragments[])=>{
     for (const j of fragment.frags) {
           console.log({j});
       for (const [k,line] of j.text.split('\n').entries()) {
-          console.log({k});
+          // console.log({k});
         w:{
-          console.log({k});
+          // console.log({k});
           switch (k) {
             case 0:{ 
 
@@ -90,7 +90,7 @@ const contentnormalize = (content:Fragments[])=>{
                 write(`> ${fragment.filename.replace(process.cwd()+'\\','').replace(/\\/g,'/')}:${j.lineNumber}`);
                 break;
               }
-              console.log(JSON.stringify(title));
+              // console.log(JSON.stringify(title));
               break w;
             }
             default:{
