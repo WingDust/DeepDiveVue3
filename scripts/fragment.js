@@ -76,12 +76,15 @@ var contentnormalize = function (content) {
                 (0, fs_1.unlinkSync)(fragmentfile);
             }
             ;
+            console.log(1);
             try {
                 for (var _g = (e_2 = void 0, __values(fragment.frags)), _h = _g.next(); !_h.done; _h = _g.next()) {
                     var j = _h.value;
+                    console.log({ j: j });
                     try {
                         for (var _j = (e_3 = void 0, __values(j.text.split('\n').entries())), _k = _j.next(); !_k.done; _k = _j.next()) {
                             var _l = __read(_k.value, 2), k = _l[0], line = _l[1];
+                            console.log({ k: k });
                             w: {
                                 console.log({ k: k });
                                 switch (k) {
@@ -151,14 +154,12 @@ var lsfiles = function () {
             for (var _b = __values(re.split('\n')), _c = _b.next(); !_c.done; _c = _b.next()) {
                 var i = _c.value;
                 err = i;
-                prettierobj(i);
                 if (i === '' || i === '\r') {
                     break;
                 }
                 ;
                 var ctx = JSON.parse(i);
                 if ((ctx === null || ctx === void 0 ? void 0 : ctx.type) === 'summary') {
-                    prettierobj(content);
                     contentnormalize(content);
                     break;
                 }
