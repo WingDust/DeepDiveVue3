@@ -57,11 +57,17 @@ var prettierobj = function (obj) {
 var fragmentfile = path_1.posix.join(process.cwd().replace(/\\/g, '/'), args[0] + '-Fragments.md');
 console.log(fragmentfile);
 var isEmptyContent = function (path) {
-    if ((0, fs_1.existsSync)(path) && (0, fs_1.readFileSync)(path).length === 0) {
+    if ((0, fs_1.existsSync)(path)) {
+        if ((0, fs_1.readFileSync)(path).length === 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    else {
         return true;
     }
-    ;
-    return false;
 };
 exports.isEmptyContent = isEmptyContent;
 var write = function (str) {

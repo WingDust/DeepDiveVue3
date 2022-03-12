@@ -53,16 +53,12 @@ export const isEmptyContent = (path:string):boolean=>{
     // 文件存在并有内容
     else{
       return false
-
     }
-    
   } 
   // 不存在
   else {
     return true;
   }
-  if (existsSync(path)&&readFileSync(path).length===0){return true;};
-  return false;
 };
 
 const write = (str:string)=>{
