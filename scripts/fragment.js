@@ -40,6 +40,21 @@ if (args.length === 0) {
     process.exit(0);
 }
 var fragmentfile = path_1.posix.join(process.cwd().replace(/\\/g, '/'), args[0] + '-Fragments.md');
+var prettierobj = function (obj) {
+    switch (typeof (obj)) {
+        case 'string': {
+            console.log(JSON.stringify(JSON.parse(obj), null, 2));
+            break;
+        }
+        case 'object': {
+            console.log(JSON.stringify(obj, null, 2));
+            break;
+        }
+        default:
+            console.log("not string or object :{obj}");
+            break;
+    }
+};
 var isEmptyContent = function (path) {
     if ((0, fs_1.existsSync)(path) && (0, fs_1.readFileSync)(path).length === 0) {
         return true;
@@ -133,7 +148,7 @@ var lsfiles = function () {
             for (var _b = __values(re.split('\n')), _c = _b.next(); !_c.done; _c = _b.next()) {
                 var i = _c.value;
                 err = i;
-                console.trace(i);
+                prettierobj(i);
                 if (i === '' || i === '\r') {
                     break;
                 }
