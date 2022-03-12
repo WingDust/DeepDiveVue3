@@ -72,6 +72,7 @@ var contentnormalize = function (content) {
     try {
         for (var _d = __values(content.entries()), _e = _d.next(); !_e.done; _e = _d.next()) {
             var _f = __read(_e.value, 2), i = _f[0], fragment = _f[1];
+            console.log({ i: i });
             if (i === 0 && !(0, exports.isEmptyContent)(fragmentfile)) {
                 (0, fs_1.unlinkSync)(fragmentfile);
             }

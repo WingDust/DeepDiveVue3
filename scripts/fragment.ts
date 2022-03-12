@@ -56,6 +56,7 @@ const write = (str:string)=>{
 
 const contentnormalize = (content:Fragments[])=>{
   for (const [i,fragment] of content.entries()) {
+      console.log({i});
     // 文件写入检查，不为空删除文件
     if (i === 0 && !isEmptyContent(fragmentfile)) {unlinkSync(fragmentfile);};
 
