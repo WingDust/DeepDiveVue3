@@ -275,10 +275,11 @@ describe('reactivity/reactive', () => {
 
   test('typeof',()=>{
     /*\ ## 测试 reactive 响应式对象类型
-    |*| - 响应式对象类型对象
+    |*| - 响应式对象类型对象为 Object
     \*/ 
     const a = reactive({aa:2});
+    // expect(typeof(a)).toEqual()
+
     console.log(typeof(a));
-    // debugger
   })
 })
