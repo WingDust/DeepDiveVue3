@@ -130,7 +130,8 @@ export const lsfiles = () => {
     try {
       for (const i of re.split('\n')) {
         err = i;
-        console.trace(i);
+        // console.trace(i);
+        prettierobj(i)
         if(i===''||i==='\r') {break;};
         let ctx = JSON.parse(i);
         if (ctx?.type ==='summary') {
