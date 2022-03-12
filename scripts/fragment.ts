@@ -23,7 +23,7 @@ interface Fragments{
 
 const prettier = (obj:string|Object)=>{
   if (typeof(obj) === 'string')
-  switch (key) {
+  switch (typeof(obj) === 'string') {
     case value:
       
       break;
