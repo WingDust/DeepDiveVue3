@@ -91,6 +91,8 @@ var contentnormalize = function (content) {
                                             write("> ".concat(fragment.filename.replace(process.cwd() + '\\', '').replace(/\\/g, '/'), ":").concat(j.lineNumber));
                                             break;
                                         }
+                                        console.log(1);
+                                        console.log(JSON.stringify(title));
                                         break w;
                                     }
                                     default: {

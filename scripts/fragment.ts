@@ -65,14 +65,15 @@ const contentnormalize = (content:Fragments[])=>{
           switch (k) {
             case 0:{ 
 
+
               let title = line.trim().substr(3,line.length).trim();
               if (title.length!==0) {
                 write(title);
                 write(`> ${fragment.filename.replace(process.cwd()+'\\','').replace(/\\/g,'/')}:${j.lineNumber}`);
                 break;
               }
-              // console.log(1);
-              // console.log(JSON.stringify(title));
+              console.log(1);
+              console.log(JSON.stringify(title));
               break w;
             }
             default:{
