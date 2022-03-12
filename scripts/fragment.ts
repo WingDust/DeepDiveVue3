@@ -22,7 +22,7 @@ interface Fragments{
 }
 
 const prettier = (obj:string|Object)=>{
-  if
+  if ()
 }
 
 
