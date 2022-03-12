@@ -21,7 +21,9 @@ interface Fragments{
   frags:Fragment[]
 }
 
-const prettier = (obj)=>{}
+const prettier = (obj:string|Object)=>{
+  if
+}
 
 
 /** 判断文件内容是否为空
