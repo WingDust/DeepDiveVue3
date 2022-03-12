@@ -39,7 +39,6 @@ var args = process.argv.slice(2);
 if (args.length === 0) {
     process.exit(0);
 }
-var fragmentfile = path_1.posix.join(process.cwd().replace(/\\/g, '/'), args[0] + '-Fragments.md');
 var prettierobj = function (obj) {
     switch (typeof (obj)) {
         case 'string': {
@@ -55,6 +54,8 @@ var prettierobj = function (obj) {
             break;
     }
 };
+var fragmentfile = path_1.posix.join(process.cwd().replace(/\\/g, '/'), args[0] + '-Fragments.md');
+prettierobj(fragmentfile);
 var isEmptyContent = function (path) {
     if ((0, fs_1.existsSync)(path) && (0, fs_1.readFileSync)(path).length === 0) {
         return true;

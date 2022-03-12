@@ -8,18 +8,7 @@ const args = process.argv.slice(2);
 if (args.length===0) {
   process.exit(0);
 }
-// 根据文件后缀生成对应 Fragments.md 文件
-// ts 对应 ts-Fragments.md
-const fragmentfile = posix.join(process.cwd().replace(/\\/g,'/'),args[0]+'-Fragments.md');
 
-interface Fragment{
-  text:string
-  lineNumber:number
-}
-interface Fragments{
-  filename:string
-  frags:Fragment[]
-}
 
 const prettierobj = (obj:string|Object)=>{
   switch (typeof(obj)) {
@@ -36,6 +25,20 @@ const prettierobj = (obj:string|Object)=>{
       break;
   }
 }
+// 根据文件后缀生成对应 Fragments.md 文件
+// ts 对应 ts-Fragments.md
+const fragmentfile = posix.join(process.cwd().replace(/\\/g,'/'),args[0]+'-Fragments.md');
+prettierobj(fragmentfile)
+
+interface Fragment{
+  text:string
+  lineNumber:number
+}
+interface Fragments{
+  filename:string
+  frags:Fragment[]
+}
+
 
 
 /** 判断文件内容是否为空
