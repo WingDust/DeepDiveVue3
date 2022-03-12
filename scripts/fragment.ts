@@ -28,10 +28,9 @@ const prettier = (obj:string|Object)=>{
       break;
     }
     case 'object':{
-      console.log(JSON.stringify(JSON.parse(obj),null,2));
+      console.log(JSON.stringify(obj,null,2));
+      break;
     }
-      
-  
     default:
       break;
   }
