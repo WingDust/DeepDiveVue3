@@ -83,6 +83,7 @@ var contentnormalize = function (content) {
                         for (var _j = (e_3 = void 0, __values(j.text.split('\n').entries())), _k = _j.next(); !_k.done; _k = _j.next()) {
                             var _l = __read(_k.value, 2), k = _l[0], line = _l[1];
                             w: {
+                                console.log({ k: k });
                                 switch (k) {
                                     case 0: {
                                         var title = line.trim().substr(3, line.length).trim();
@@ -91,7 +92,6 @@ var contentnormalize = function (content) {
                                             write("> ".concat(fragment.filename.replace(process.cwd() + '\\', '').replace(/\\/g, '/'), ":").concat(j.lineNumber));
                                             break;
                                         }
-                                        console.log(1);
                                         console.log(JSON.stringify(title));
                                         break w;
                                     }

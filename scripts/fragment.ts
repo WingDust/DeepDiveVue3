@@ -62,6 +62,7 @@ const contentnormalize = (content:Fragments[])=>{
     for (const j of fragment.frags) {
       for (const [k,line] of j.text.split('\n').entries()) {
         w:{
+          console.log({k});
           switch (k) {
             case 0:{ 
 
@@ -72,7 +73,6 @@ const contentnormalize = (content:Fragments[])=>{
                 write(`> ${fragment.filename.replace(process.cwd()+'\\','').replace(/\\/g,'/')}:${j.lineNumber}`);
                 break;
               }
-              console.log(1);
               console.log(JSON.stringify(title));
               break w;
             }
