@@ -128,12 +128,14 @@ export const lsfiles = () => {
     \*/
     let err;//记录 JSON.parse 有误的信息
     try {
+      // 由于 re 返回的为字符串，需要以分割换行转成一个个可 JSON.parse 的 JSON 字符串
       for (const i of re.split('\n')) {
         err = i;
         // console.trace(i);
         prettierobj(i)
         if(i===''||i==='\r') {break;};
         let ctx = JSON.parse(i);
+        // 当
         if (ctx?.type ==='summary') {
           // console.log(content);
           contentnormalize(content);
