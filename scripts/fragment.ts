@@ -32,6 +32,8 @@ const prettier = (obj:string|Object)=>{
       break;
     }
     default:
+      console.log(`{}`);
+      
       break;
   }
 }
