@@ -58,9 +58,11 @@ const contentnormalize = (content:Fragments[])=>{
   for (const [i,fragment] of content.entries()) {
       console.log({i});
     // 文件写入检查，不为空删除文件
-    if (i === 0 && !isEmptyContent(fragmentfile)) {unlinkSync(fragmentfile);};
+    if (i === 0 && !isEmptyContent(fragmentfile)) {
+      console.log('remove fragment-file because it not empty');
+      unlinkSync(fragmentfile);
+    };
 
-          console.log(1);
     for (const j of fragment.frags) {
           console.log({j});
       for (const [k,line] of j.text.split('\n').entries()) {
