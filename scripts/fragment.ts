@@ -28,7 +28,7 @@ const prettierobj = (obj:string|Object)=>{
 // 根据文件后缀生成对应 Fragments.md 文件
 // ts 对应 ts-Fragments.md
 const fragmentfile = posix.join(process.cwd().replace(/\\/g,'/'),args[0]+'-Fragments.md');
-prettierobj(fragmentfile)
+console.log(fragmentfile);
 
 interface Fragment{
   text:string

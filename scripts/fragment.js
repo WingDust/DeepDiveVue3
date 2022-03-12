@@ -55,7 +55,7 @@ var prettierobj = function (obj) {
     }
 };
 var fragmentfile = path_1.posix.join(process.cwd().replace(/\\/g, '/'), args[0] + '-Fragments.md');
-prettierobj(fragmentfile);
+console.log(fragmentfile);
 var isEmptyContent = function (path) {
     if ((0, fs_1.existsSync)(path) && (0, fs_1.readFileSync)(path).length === 0) {
         return true;
