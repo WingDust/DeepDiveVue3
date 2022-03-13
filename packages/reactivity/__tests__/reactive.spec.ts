@@ -278,10 +278,9 @@ describe('reactivity/reactive', () => {
     |*| - 响应式对象类型对象为 Object
     \*/ 
     const a = reactive({aa:2});
-    // expect(typeof(a)).toEqual()
+    expect(typeof(a)).toEqual('object')
     for (let i in a){
       console.log(i);
     }
-    console.log(typeof(a));
   })
 })
