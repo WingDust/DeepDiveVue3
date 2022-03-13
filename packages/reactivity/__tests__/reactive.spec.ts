@@ -275,12 +275,12 @@ describe('reactivity/reactive', () => {
 
   test('typeof',()=>{
     /*\ ## 测试 reactive 响应式对象类型
-    |*| - 响应式对象类型对象为 Object
+    |*| - 响应式对象类型对象为 Object ,为一个 Proxy 对象
     \*/ 
+    debugger
     const a = reactive({aa:2});
     expect(typeof(a)).toEqual('object')
     for (let i in a){
-      debugger
       console.log(i);
     }
   })
