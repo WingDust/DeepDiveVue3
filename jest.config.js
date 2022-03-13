@@ -59,7 +59,7 @@ module.exports = {
       // to coverage and can cause netlify builds to fail
       ['/node_modules/', '/examples/__tests__']
     : ['/node_modules/'],
-  transform:{
-    '^.+\\.ts$': '<rootDir>/node_modules/ts-jest',
+  transform:{//不需要这个 jest 也能运行
+  '^.+\\.ts$': '<rootDir>/node_modules/ts-jest',
   }
 }

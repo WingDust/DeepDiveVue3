@@ -280,6 +280,7 @@ describe('reactivity/reactive', () => {
     const a = reactive({aa:2});
     expect(typeof(a)).toEqual('object')
     for (let i in a){
+      debugger
       console.log(i);
     }
   })
