@@ -273,7 +273,7 @@ describe('reactivity/reactive', () => {
     expect(isReactive(observed)).toBe(false)
   })
 
-  test('typeof',()=>{
+  test('of',()=>{
     /*\ ## 测试 reactive 响应式对象类型
     |*| - 响应式对象类型对象为 Object
     \*/ 
