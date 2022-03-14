@@ -281,7 +281,6 @@ describe('reactivity/reactive', () => {
     const a = reactive({aa:2});
     expect(typeof(a)).toEqual('object')
     // @ts-ignore
-    console.log(a.__isProxy)
     // for (let i in a){
     //   console.log(i);
     // }
