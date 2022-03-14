@@ -1,3 +1,7 @@
+/*\ ## 几个问题
+|*| - Vue3怎么判断一个对象是否被 reactive 
+|*| - Vue3怎么判断一个对象是否是 Proxy 对象
+\*/ 
 import { isObject, toRawType, def } from '@vue/shared'
 import {
   mutableHandlers,
