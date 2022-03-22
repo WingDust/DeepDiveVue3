@@ -33,6 +33,9 @@ describe('reactivity/reactive', () => {
   })
 
   test('nested reactives', () => {
+    /*\ ## 被 reactives 装饰的对象，即使它有嵌套，内部嵌套也会是响应式的
+    |*| 
+    \*/ 
     const original = {
       nested: {
         foo: 1
