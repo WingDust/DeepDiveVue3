@@ -82,7 +82,8 @@ function createArrayInstrumentations() {
   return instrumentations
 }
 
-function createGetter(isReadonly = false, shallow = false) {
+function createGetter(isReadonly = false, shallow = false) 
+{
   return function get(target: Target, key: string | symbol, receiver: object) {
     if (key === ReactiveFlags.IS_REACTIVE) {
       return !isReadonly
