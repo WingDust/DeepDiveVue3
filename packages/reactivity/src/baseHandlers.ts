@@ -1,5 +1,5 @@
 /*\ ## 这个包含的有创建 Proxy 对象也就（设计的几类响应式对象）需要的基础处理函数
-|*| - 当响应式对象 `.` 属性时（哪怕就是点来访问属性，不对属性做任何操作），就会触发这个文件的处理函数
+|*| 
 \*/ 
 import {
   reactive,
@@ -82,8 +82,7 @@ function createArrayInstrumentations() {
   return instrumentations
 }
 
-function createGetter(isReadonly = false, shallow = false) 
-{
+function createGetter(isReadonly = false, shallow = false) {
   return function get(target: Target, key: string | symbol, receiver: object) {
     if (key === ReactiveFlags.IS_REACTIVE) {
       return !isReadonly
