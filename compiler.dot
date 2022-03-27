@@ -17,7 +17,10 @@ digraph compile {
     label="doCompileTemplate"
     funs[
       label="内部默认编译模块使用了 @compiler-dom 
-      返回出来的是解构是 AST"
+      返回出来的是解构是 AST
+      @compiler-dom 这个包导出东西成了为 doCompileTemplate 函数参数
+      compiler 的默认值
+      "
     ]
 
   }
