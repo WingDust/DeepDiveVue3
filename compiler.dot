@@ -10,7 +10,9 @@ digraph compile {
     label="compileTemplate"
     fun[
     label="经过一些检查
-    ，最后 `return doCompileTemplate`"
+    ，最后 
+    `return doCompileTemplate`
+    "
     ]
   }
   subgraph  cluster_doCompileTemplate{
@@ -18,7 +20,8 @@ digraph compile {
     funs[
       label="内部默认编译模块使用了 @compiler-dom 
       返回出来的是解构是 AST
-      @compiler-dom 这个包导出东西成了为 doCompileTemplate 函数参数
+      @compiler-dom 这个包导出东西成了为 
+      doCompileTemplate 函数参数
       compiler 的默认值
       "
     ]
