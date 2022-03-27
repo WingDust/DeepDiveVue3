@@ -13,9 +13,10 @@ digraph compile {
     ]
   }
   subgraph  cluster_doCompileTemplate{
-    label="compileTemplate"
+    label="doCompileTemplate"
     funs[
-      label="内部默认编译模块使用了 @compiler-dom"
+      label="内部默认编译模块使用了 @compiler-dom 
+      返回出来的是解构是 AST"
     ]
 
   }
