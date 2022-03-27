@@ -153,3 +153,27 @@ test('should generate the correct imports expression', () => {
   expect(code).toMatch(`_ssrRenderAttr(\"src\", _imports_1)`)
   expect(code).toMatch(`_createVNode(\"img\", { src: _imports_1 })`)
 })
+
+test('template class comment',()=>{
+  const source1 = `
+  <div><p>{{ render }}</p></div>
+  `
+  const source = `
+<div
+class ="
+<!-- fixed-->
+color
+big
+small
+"
+>
+</div>
+  `
+
+  const result = compile({ filename: 'example.vue', source })
+
+  expect(result.errors.length).toBe(0)
+  expect(result.source).toBe(source)
+  // should expose render fn
+  expect(result.code).toMatch(`export function render(`)
+})
