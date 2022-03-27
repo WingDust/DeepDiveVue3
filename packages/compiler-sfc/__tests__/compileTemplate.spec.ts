@@ -155,9 +155,7 @@ test('should generate the correct imports expression', () => {
 })
 
 test('template class comment',()=>{
-  const source1 = `
-  <div><p>{{ render }}</p></div>
-  `
+  // const source1 = `<div><p>{{ render }}</p></div>`
   const source = `
 <div
 class ="
@@ -169,6 +167,7 @@ small
 >
 </div>
   `
+  debugger
 
   const result = compile({ filename: 'example.vue', source })
 
