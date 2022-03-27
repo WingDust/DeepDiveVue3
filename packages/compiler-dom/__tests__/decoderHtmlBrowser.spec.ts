@@ -39,3 +39,19 @@ describe('decodeHtmlBrowser', () => {
     ).toBe('<strong><strong>&</strong></strong>')
   })
 })
+
+test('comment',()=>{
+  const source = `
+<div
+class ="
+<!-- fixed-->
+color
+big
+small
+"
+>
+</div>
+  `
+  debugger
+  decodeHtmlBrowser(source)
+})
