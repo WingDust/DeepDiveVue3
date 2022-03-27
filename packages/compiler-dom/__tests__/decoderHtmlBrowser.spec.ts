@@ -53,5 +53,5 @@ small
 </div>
   `
   debugger
-  decodeHtmlBrowser(source)
+  decodeHtmlBrowser(source,true)
 })
