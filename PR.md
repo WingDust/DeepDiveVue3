@@ -8,7 +8,6 @@ color
 big
 small
 "
-
 >
 </div>
 ```
