@@ -1,0 +1,25 @@
+digraph compile {
+
+  node [color=gray,shape=box,fontname="Cascadia Mono PL"]
+  // 顶标题
+  labelloc = "t"
+  label="编译模板"
+
+  subgraph cluster_compileTemplate{
+    label="compileTemplate"
+    fun[
+    label="经过一些检查
+    ，最后 `return doCompileTemplate`"
+    ]
+  }
+  subgraph  cluster_doCompileTemplate{
+    label="compileTemplate"
+    funs[
+      label="内部默认编译模块使用了 @compiler-dom"
+    ]
+
+  }
+
+  fun->  funs[label="尾调用"]
+
+}
