@@ -291,7 +291,7 @@ describe('reactivity/reactive', () => {
   })
 })
   test('overprops',()=>{
-    /*\ ## 测试 reactive 响应式对象类型
+    /*\ ## 测试 reactive 响应式对象类型的属性修改
     |*| - 响应式对象类型对象为 Object ,为一个 Proxy 对象
     \*/ 
     // debugger
