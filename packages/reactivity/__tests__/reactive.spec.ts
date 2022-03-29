@@ -290,3 +290,20 @@ describe('reactivity/reactive', () => {
     // }
   })
 })
+  test('overprops',()=>{
+    /*\ ## 测试 reactive 响应式对象类型
+    |*| - 响应式对象类型对象为 Object ,为一个 Proxy 对象
+    \*/ 
+    // debugger
+    const props = "这是一个属性"
+    const a = reactive({[props]:2});
+    debugger
+    a[props]= 3 
+    console.log(a[props]);
+    // expect(typeof(a)).toEqual('object')
+    // @ts-ignore
+    // for (let i in a){
+    //   console.log(i);
+    // }
+  })
+})
