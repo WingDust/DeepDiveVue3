@@ -31,3 +31,14 @@ digraph compile {
   fun->  funs[label="尾调用"]
 
 }
+
+digraph ref {
+  label="一个 ref的创建"
+  subgraph cluster_ref{
+    label="首先 ref 是一个函数"
+    ref[
+      label="内部只有一个语句，就是调用"
+    ]
+
+  }
+}
