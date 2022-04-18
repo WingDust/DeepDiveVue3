@@ -20,6 +20,9 @@ export interface Ref<T = any> {
    * We need this to be in public d.ts but don't want it to show up in IDE
    * autocomplete, so we use a private Symbol instead.
    */
+  /*\ ## 用来判断这个对象是否是 ref
+  |*| - ref 对象上添加一个 symbol 的真假属性，来判断这个对象是否是 ref
+  \*/ 
   [RefSymbol]: true
 }
 
