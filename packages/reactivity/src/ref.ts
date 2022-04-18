@@ -62,6 +62,9 @@ export function triggerRefValue(ref: RefBase<any>, newVal?: any) {
   }
 }
 
+/*\ ## 判断一个对象是否是 ref 对象
+|*| - 一个 ref 对象会一个真假值的 __v_isRef 属性判断，是否为 ref 对象
+\*/ 
 export function isRef<T>(r: Ref<T> | unknown): r is Ref<T>
 export function isRef(r: any): r is Ref {
   return !!(r && r.__v_isRef === true)
@@ -89,6 +92,11 @@ export function shallowRef(value?: unknown) {
   return createRef(value, true)
 }
 
+/*\ ## ref 函数的第二个函数
+|*| > ref 函数的中只有一个语句，就是返回 createRef函数 的调用
+|*| - 先判断要被 ref 的值是否是 ref,是则返回原值
+|*| - 不是则用  RefImpl 来生成一个 Ref 对象
+\*/ 
 function createRef(rawValue: unknown, shallow: boolean) {
   if (isRef(rawValue)) {
     return rawValue

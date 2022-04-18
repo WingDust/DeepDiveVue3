@@ -37,7 +37,9 @@ digraph ref {
   subgraph cluster_ref{
     label="首先 ref 是一个函数"
     ref[
-      label="内部只有一个语句，就是调用"
+      label="内部只有一个语句，就是调用 另一个函数 createRef
+      createRef 函数参数 一个是要被 ref 的值，一个真假值
+      "
     ]
 
   }
