@@ -241,7 +241,10 @@ export function isShallow(value: unknown): boolean {
 }
 
 /*\ ## 判断一个对象是否是 Proxy 对象 
-|*| > 因为目前不能直接判断直接 Proxy 
+|*| > 因为目前不能直接判断是否是 Proxy 对象 ,
+|*| > 所以 Vue3 对自己设计的响应式对象上，
+|*| > 也就是 Proxy 对象,上添加了一个自定义属性，用来判断是为 Proxy 对象,
+|*| > 所以这个只能用来在 Vue3 中使用，不过这个方式是值得使用的
 \*/ 
 export function isProxy(value: unknown): boolean {
   return isReactive(value) || isReadonly(value)
