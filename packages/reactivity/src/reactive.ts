@@ -241,7 +241,7 @@ export function isShallow(value: unknown): boolean {
 }
 
 /*\ ## 判断一个对象是否是 Proxy 对象 
-|*| > 因为
+|*| > 因为目前不能直接判断直接 Proxy 
 \*/ 
 export function isProxy(value: unknown): boolean {
   return isReactive(value) || isReadonly(value)
