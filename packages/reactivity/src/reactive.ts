@@ -240,6 +240,9 @@ export function isShallow(value: unknown): boolean {
   return !!(value && (value as Target)[ReactiveFlags.IS_SHALLOW])
 }
 
+/*\ ## 判断一个对象是否是 Proxy 对象 
+|*| > 因为
+\*/ 
 export function isProxy(value: unknown): boolean {
   return isReactive(value) || isReadonly(value)
 }
