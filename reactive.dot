@@ -5,7 +5,16 @@ digraph compile {
   labelloc = "t"
   label="响应式设计"
 
-    
+   
+  subgraph cluster_bucket{
+    label=""
+    fun[
+    label="经过一些检查
+    ，最后 
+    `return doCompileTemplate`
+    "
+    ]
+  }
 
 
 }
