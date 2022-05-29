@@ -7,12 +7,9 @@ digraph compile {
 
    
   subgraph cluster_bucket{
-    label=""
+    label="存储副作用函数的桶"
     fun[
-    label="经过一些检查
-    ，最后 
-    `return doCompileTemplate`
-    "
+    label="为一个 WeakMap"
     ]
   }
 
