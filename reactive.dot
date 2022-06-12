@@ -12,6 +12,4 @@ digraph compile {
     label="为一个 WeakMap"
     ]
   }
-
-
 }
