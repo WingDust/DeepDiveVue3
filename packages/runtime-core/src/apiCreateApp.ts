@@ -25,6 +25,9 @@ import { installAppCompatProperties } from './compat/global'
 import { NormalizedPropsOptions } from './componentProps'
 import { ObjectEmitsOptions } from './componentEmits'
 
+/*\ ## app.mount 中 app 类型为 `App<HostElement = any>`
+|*| - 这个的挂载是 `const app = createApp(App)` 中 appr 类型
+\*/ 
 export interface App<HostElement = any> {
   version: string
   config: AppConfig

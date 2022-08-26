@@ -1,5 +1,7 @@
 # Deep Dive Vue3
 > 这个仓库是为了深入 Vue3 而建立的，阅读源码方式将会以 [tofile](https://github.com/WingDust/tofile) 来做
+
+> 阅读源码方式的新增为添加 `npm i vue` 从 `node_module` 中 vue 的类型声明文件来入口源码的大体结构，又由于它是 `TypeScript` 写的，所以根据类型声明文中的类型来去 `ripgrep` 找到对应的源码
 # 问题
 ## 为什么 vue3 没有使用 createDocumentFragment
 # 我最应该看了各种 api 的源码
