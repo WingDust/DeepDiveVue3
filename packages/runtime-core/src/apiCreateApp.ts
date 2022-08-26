@@ -170,13 +170,22 @@ export function createAppContext(): AppContext {
   }
 }
 
+/*\ ## 由于 App<HostElement> 是 `const app = createApp(App)` 返回类型，所以 CreateAppFunction类型对应函数 createAppAPI
+|*| 
+\*/ 
 export type CreateAppFunction<HostElement> = (
   rootComponent: Component,
   rootProps?: Data | null
 ) => App<HostElement>
 
+/*\ ## 暂时不知uid 作为何用
+|*| 
+\*/ 
 let uid = 0
 
+/*\ ##  createAppAPI为高阶函数，
+|*| 
+\*/ 
 export function createAppAPI<HostElement>(
   render: RootRenderFunction,
   hydrate?: RootHydrateFunction
