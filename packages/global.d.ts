@@ -11,6 +11,9 @@ declare var __NODE_JS__: boolean
 declare var __SSR__: boolean
 declare var __COMMIT__: string
 declare var __VERSION__: string
+/*\ ##  __COMPAT__ 
+|*| - 判断vue版本适应性，以做兼容处理
+\*/ 
 declare var __COMPAT__: boolean
 
 // Feature flags

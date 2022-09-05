@@ -3,6 +3,10 @@ import { camelize } from '@vue/runtime-core'
 
 type Style = string | Record<string, string | string[]> | null
 
+/** 
+ * 更新 dom 的 style 属性
+ * @function
+ */
 export function patchStyle(el: Element, prev: Style, next: Style) {
   const style = (el as HTMLElement).style
   const isCssString = isString(next)

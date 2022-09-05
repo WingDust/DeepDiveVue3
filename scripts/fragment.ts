@@ -139,7 +139,7 @@ export const lsfiles = () => {
   // console.trace(workspace);
   
   
-  const re =  execSync(run,{shell:'pwsh',encoding:'utf-8'});
+  const re =  execSync(run,{encoding:'utf-8'});
   // console.trace(re);
   
     /*\ ## 中断 `forof`

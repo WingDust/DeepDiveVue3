@@ -6,6 +6,9 @@ const doc = (typeof document !== 'undefined' ? document : null) as Document
 
 const templateContainer = doc && doc.createElement('template')
 
+/** dom 的添加，删除，创建元素节点、文本节点、注释节点
+ * @function
+ */
 export const nodeOps: Omit<RendererOptions<Node, Element>, 'patchProp'> = {
   insert: (child, parent, anchor) => {
     parent.insertBefore(child, anchor || null)

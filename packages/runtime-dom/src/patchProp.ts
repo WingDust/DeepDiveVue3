@@ -9,7 +9,10 @@ import { RendererOptions } from '@vue/runtime-core'
 const nativeOnRE = /^on[a-z]/
 
 type DOMRendererOptions = RendererOptions<Node, Element>
-
+/** 
+ * 当 Visual Dom 的对比出可以知道那些元素需要更新 dom 属性
+ * @function
+ */
 export const patchProp: DOMRendererOptions['patchProp'] = (
   el,
   key,
